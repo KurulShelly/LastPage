@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PDF Reader</title>
+    <title>PDF Progress Reader</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <style>
@@ -17,7 +16,7 @@
             height: 100vh;
         }
 
-        .card {
+        .container {
             background: white;
             padding: 30px;
             border-radius: 15px;
@@ -28,18 +27,16 @@
 
         h2 {
             margin-bottom: 10px;
-            color: #333;
         }
 
         .last-page {
-            font-size: 18px;
             margin: 15px 0;
-            color: #555;
+            font-size: 18px;
         }
 
         .highlight {
-            font-weight: bold;
             color: #4facfe;
+            font-weight: bold;
         }
 
         input {
@@ -47,7 +44,6 @@
             padding: 10px;
             border-radius: 8px;
             border: 1px solid #ccc;
-            outline: none;
             margin-bottom: 10px;
         }
 
@@ -64,12 +60,9 @@
 
         button:hover {
             background: #007bff;
-            transform: scale(1.05);
         }
 
         .open-btn {
-            display: inline-block;
-            margin-top: 15px;
             background: #28a745;
         }
 
@@ -81,23 +74,23 @@
 
 <body>
 
-<div class="card">
-    <h2>📖 PDF Reader</h2>
+<div class="container">
+    <h2>PDF Progress Reader</h2>
 
     <div class="last-page">
         Halaman terakhir: <span id="lastPage" class="highlight">1</span>
     </div>
 
-    <input type="number" id="pageInput" placeholder="Masukkan halaman..." min="1">
+    <input type="number" id="pageInput" placeholder="Masukkan halaman" min="1">
 
     <br>
 
-    <button onclick="savePage()">💾 Simpan</button>
+    <button onclick="savePage()">Simpan</button>
 
     <br>
 
     <a id="openDrive" target="_blank">
-        <button class="open-btn">🚀 Buka di Google Drive</button>
+        <button class="open-btn">Buka di Google Drive</button>
     </a>
 </div>
 
